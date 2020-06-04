@@ -121,6 +121,7 @@ abstract public class World {
 
     public int countLife() {
         if (!counted) {
+            count = 0;
             for (int i = 0; i < width; i++) {
                 for (int j = 0; j < height; j++) {
                     if (board[i][j]) ++count;
