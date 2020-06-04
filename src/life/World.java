@@ -107,8 +107,9 @@ abstract public class World {
             for (int j = 0; j < height; j++) {
                 int n = countNeighbors(i, j);
 
-                if (n == 3) temp[i][j] = true;
-                else if ((n == 2) && board[i][j] == true)
+                if (n == 3)
+                    temp[i][j] = true;
+                else if (n == 2 && board[i][j])
                     temp[i][j] = true;
                 else
                     temp[i][j] = false;
