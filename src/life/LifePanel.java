@@ -2,8 +2,6 @@ package life;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 
 public class LifePanel extends JPanel {
@@ -17,45 +15,24 @@ public class LifePanel extends JPanel {
         add(w, BorderLayout.CENTER);
 
         JButton nextGen = new JButton("Next Generation");
-        nextGen.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (!t.isRunning())
-                    w.nextGen();
-            }
+        nextGen.addActionListener(e -> {
+            if (!t.isRunning())
+                w.nextGen();
         });
 
         JButton restart = new JButton("Restart");
-        restart.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                w.reset();
-                t.stop();
-            }
+        restart.addActionListener(e -> {
+            w.reset();
+            t.stop();
         });
 
         JButton go = new JButton("Go");
-        go.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                t.start();
-            }
-        });
+        go.addActionListener(e -> t.start());
 
         JButton stop = new JButton("Stop");
-        stop.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                t.stop();
-            }
-        });
+        stop.addActionListener(e -> t.stop());
 
-        t = new Timer(500, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                w.nextGen();
-            }
-        });
+        t = new Timer(500, e -> w.nextGen());
 
         JPanel buttons = new JPanel();
         buttons.add(nextGen);
