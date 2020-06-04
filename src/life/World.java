@@ -106,13 +106,7 @@ abstract public class World {
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
                 int n = countNeighbors(i, j);
-
-                if (n == 3)
-                    temp[i][j] = true;
-                else if (n == 2 && board[i][j])
-                    temp[i][j] = true;
-                else
-                    temp[i][j] = false;
+                temp[i][j] = n == 3 || n == 2 && board[i][j];
             }
         }
 
