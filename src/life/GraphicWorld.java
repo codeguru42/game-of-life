@@ -9,7 +9,7 @@ public class GraphicWorld extends World {
     private int y;
 
     public GraphicWorld(int w, int h) {
-        super(10, 10);
+        super(w, h);
     }
 
     public GraphicWorld(int x, int y, int w, int h) {
