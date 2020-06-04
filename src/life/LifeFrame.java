@@ -42,6 +42,7 @@ public class LifeFrame extends JFrame {
         optionsDialog = new OptionsDialog(this, x, y);
 
         createMenu();
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     private void createMenu() {
