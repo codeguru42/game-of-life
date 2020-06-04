@@ -34,11 +34,9 @@ public class TextWorld extends World {
 
     @Override
     public String toString() {
-        StringBuffer out = new StringBuffer();
+        StringBuilder out = new StringBuilder();
 
-        for (int i = 0; i < 2 * width + 1; i++) {
-            out.append('-');
-        }
+        out.append("-".repeat(Math.max(0, 2 * width + 1)));
         out.append('\n');
 
         for (int i = 0; i < height; i++) {
@@ -53,9 +51,7 @@ public class TextWorld extends World {
             out.append('\n');
         }
 
-        for (int i = 0; i < 2 * width + 1; i++) {
-            out.append('-');
-        }
+        out.append("-".repeat(Math.max(0, 2 * width + 1)));
         out.append('\n');
 
         return "" + out;
