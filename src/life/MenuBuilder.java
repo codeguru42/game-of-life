@@ -14,11 +14,11 @@ public class MenuBuilder {
         JMenu menu = new JMenu(name);
         menuBar.add(menu);
 
-        for (int i = 0; i < actions.length; i++) {
-            if (actions[i] == null)
+        for (Action action : actions) {
+            if (action == null)
                 menu.addSeparator();
             else
-                menu.add(actions[i]);
+                menu.add(action);
         }
     }
 }
