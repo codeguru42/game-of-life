@@ -12,7 +12,7 @@ public class LifeFrame extends JFrame {
     private final OptionsDialog optionsDialog;
 
     public static void main(String[] args) {
-        new LifeFrame().show();
+        new LifeFrame().setVisible(true);
     }
 
     public LifeFrame() {
@@ -85,7 +85,7 @@ public class LifeFrame extends JFrame {
         a[0] = new AbstractAction("Options...") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                optionsDialog.show();
+                optionsDialog.setVisible(true);
             }
         };
 
