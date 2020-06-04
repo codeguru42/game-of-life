@@ -39,12 +39,12 @@ public class GraphicWorld extends World {
     }
 
     private void paint(Graphics g) {
-        for (int i = 0; i < width; i++) {
+        for (int i = 0; i <= width; i++) {
             int xPos = x + i * CELL_SIZE;
             g.drawLine(xPos, y, xPos, y + height * CELL_SIZE);
         }
 
-        for (int i = 0; i < height; i++) {
+        for (int i = 0; i <= height; i++) {
             int yPos = y + i * CELL_SIZE;
             g.drawLine(x, yPos, x + width * CELL_SIZE, yPos);
         }
