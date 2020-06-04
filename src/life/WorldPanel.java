@@ -16,6 +16,7 @@ public class WorldPanel extends JPanel {
     public WorldPanel() {
         genCount = 0;
         genLabel = new JLabel("Generation " + genCount);
+        add(genLabel);
 
         addMouseListener(new MouseAdapter() {
             @Override
